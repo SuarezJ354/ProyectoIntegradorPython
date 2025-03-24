@@ -45,3 +45,31 @@ class Library:
         for book in self.books:
             print(book.show_data())
             print("---")
+
+def main_menu():
+    library = Library()
+
+    while True:
+        print("\n\nMenu Principal")
+        print("1. Añadir libro")
+        print("2. Eliminar libro")
+        print("3. Buscar libro")
+        print("4. Mostrar libros")
+        print("5. Salir")
+        option = int(input("Seleciona una opcion: "))
+
+        if option == 1:
+            library.add_book()
+        elif option == 2:
+            library.remove_book()
+        elif option == 3:
+            library.search_book()
+        elif option == 4:
+            library.list_books()
+        elif option == 5:
+            print("Hasta pronto")
+            break
+        else:
+            print("Opcion invalidad")
+
+main_menu()
